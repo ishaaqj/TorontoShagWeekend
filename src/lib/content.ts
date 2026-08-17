@@ -29,17 +29,17 @@ export const event = {
 
 export const essentials = {
   what: "A weekend of collegiate shag: workshops for every level, a Saturday night social, and a chance to meet the Toronto swing community.",
-  who: "Everyone - total beginners, dancers switching over from Lindy Hop, and shag dancers who've been at this for years.",
+  who: "Everyone — total beginners, dancers switching over from Lindy Hop, and shag dancers who've been at this for years.",
   where: "Workshops and socials in downtown Toronto. Full venue details coming soon.",
-  when: "Novemeber 2027 — full weekend, schedule below.",
+  when: "TBD, 2027 — full weekend, schedule below.",
   howMuch: "Full weekend pass, or single workshops and social tickets available separately.",
 };
 
 export const whatIsShag = {
   heading: "What is collegiate shag?",
   body: [
-    "Collegiate shag is a fast (and chill!!) dance born in the 1930s alongside swing music's early years — built for up-tempo jazz, tight spaces, and dancers who wanted to move fast without slowing down for anyone.",
-    "It's danced in 6-count phrases with a syncopated kick-step rhythm, which is where its reputation for being both simple to start and endlessly deep to develop comes from. Join the Toronto shag scene and try it out!",
+    "Collegiate shag is a fast, bouncy partner dance born in the 1930s alongside swing music's early years — built for up-tempo jazz, tight spaces, and dancers who wanted to move fast without slowing down for anyone.",
+    "It's danced in 6-count phrases with a syncopated kick-step rhythm, which is where its reputation for being both simple to start and endlessly deep to develop comes from. Toronto's shag scene has been quietly growing for years — this weekend is our chance to bring it into the open.",
   ],
 };
 
