@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #13232a;
+  --ink-soft: #1c343d;
+  --paper: #f1ecda;
+  --paper-soft: #e8e1c8;
+  --brass: #c6963c;
+  --brass-bright: #ddb15c;
+  --wine: #8c3540;
+  --wine-soft: #a6444f;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-soft: var(--paper-soft);
+  --color-brass: var(--brass);
+  --color-brass-bright: var(--brass-bright);
+  --color-wine: var(--wine);
+  --color-wine-soft: var(--wine-soft);
+
+  --font-display: "Fraunces Variable", "Fraunces", serif;
+  --font-body: "Work Sans", sans-serif;
+  --font-data: "Space Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Keep focus visible for keyboard users against both dark and light bands */
+:focus-visible {
+  outline: 2px solid var(--brass-bright);
+  outline-offset: 3px;
+}
