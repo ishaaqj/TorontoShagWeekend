@@ -7,21 +7,26 @@ import Teachers from "@/components/Teachers";
 import Tickets from "@/components/Tickets";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
+import { client } from "../../sanity/lib/client";
+import { eventSettingsQuery } from "../../sanity/lib/queries";
+import type { EventSettings } from "../../sanity/lib/types";
 
-export default function Home() {
+export default async function Home() {
+  const eventSettings = await client.fetch<EventSettings>(eventSettingsQuery);
+
   return (
     <>
-      <Nav />
+      <Nav eventName={eventSettings?.eventName} />
       <main id="main">
-        <Hero />
-        <Essentials />
-        <WhatIsShag />
+        <Hero settings={eventSettings} />
+        <Essentials essentials={eventSettings?.essentials} />
+        <WhatIsShag whatIsShag={eventSettings?.whatIsShag} />
         <Workshops />
         <Teachers />
-        <Tickets />
-        <Location />
+        <Tickets pricing={eventSettings?.pricing} links={eventSettings?.links} />
+        <Location location={eventSettings?.location} />
       </main>
-      <Footer />
+      <Footer eventName={eventSettings?.eventName} links={eventSettings?.links} />
     </>
   );
 }

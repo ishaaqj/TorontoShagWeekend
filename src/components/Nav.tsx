@@ -1,6 +1,11 @@
 import { navSections, event } from "@/lib/content";
 
-export default function Nav() {
+
+type NavProps = {
+  eventName?: string;
+};
+
+export default function Nav({ eventName }: NavProps) {
   return (
     <header className="sticky top-0 z-50 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/80 border-b border-paper/10">
       <nav
@@ -11,7 +16,7 @@ export default function Nav() {
           href="#top"
           className="font-display text-lg text-paper tracking-tight whitespace-nowrap"
         >
-          {event.name}
+          {eventName ?? "Toronto Shag Weekend"}
         </a>
         <ul className="hidden sm:flex items-center gap-7">
           {navSections.map((section) => (

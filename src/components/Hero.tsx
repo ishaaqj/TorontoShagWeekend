@@ -1,20 +1,25 @@
 import Image from "next/image";
 import { event } from "@/lib/content";
 import BeatDivider from "./BeatDivider";
+import type { EventSettings } from "../../sanity/lib/types";
 
-export default function Hero() {
+type HeroProps = {
+  settings?: EventSettings;
+};
+
+export default function Hero({ settings }: HeroProps) {
   return (
     <section id="top" className="bg-ink text-paper">
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-8 sm:pt-28 sm:pb-12 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
           <p className="font-data text-xs tracking-[0.25em] uppercase text-brass-bright mb-6">
-            {event.dates} · {event.city}
+            {settings?.dates ?? event.dates} · {settings?.city ?? event.city}
           </p>
           <h1 className="font-display text-5xl sm:text-7xl leading-[1.02] max-w-3xl">
-            {event.name}
+            {settings?.eventName ?? event.name}
           </h1>
           <p className="font-body text-lg sm:text-xl text-paper/80 max-w-xl mt-6">
-            {event.tagline}
+            {settings?.tagline ?? event.tagline}
           </p>
           <div className="flex flex-wrap gap-4 mt-9">
             <a
