@@ -11,6 +11,10 @@ import { client } from "../../sanity/lib/client";
 import { eventSettingsQuery } from "../../sanity/lib/queries";
 import type { EventSettings } from "../../sanity/lib/types";
 
+// Re-fetch from Sanity on every request so published edits show up on refresh,
+// without needing a redeploy.
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const eventSettings = await client.fetch<EventSettings>(eventSettingsQuery);
 
