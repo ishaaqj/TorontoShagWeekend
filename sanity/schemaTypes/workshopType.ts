@@ -47,12 +47,6 @@ export const workshopType = defineType({
             title: "Description",
             type: "text",
         }),
-        defineField({
-            name: "order",
-            title: "Display order",
-            type: "number",
-            description: "Lower numbers show first on the site. Optional.",
-        }),
     ],
     preview: {
         select: { title: "title", subtitle: "time" },

@@ -32,3 +32,21 @@ export type EventSettings = {
         contactEmail?: string;
     };
 };
+
+export type Teacher = {
+    _id: string;
+    name: string;
+    bio?: string;
+    instagram?: string;
+}
+
+export type Workshop = {
+    _id: string;
+    title: string;
+    instructors?: string[];
+    time?: string;
+    location?: string;
+    price?: string;
+    level?: string;
+    description?: string;
+}
