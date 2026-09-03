@@ -9,7 +9,7 @@ export const structure: StructureResolver = (S) =>
         .id('eventSettings')
         .child(S.document().schemaType('eventSettings').documentId('eventSettings')),
       S.divider(),
-      S.documentTypeListItem('teacher').title('Teachers'),
+
       S.documentTypeListItem('workshop').title('Workshops'),
       ...S.documentTypeListItems().filter(
         (item) => item.getId() && !['teacher', 'workshop', 'eventSettings'].includes(item.getId()!),
