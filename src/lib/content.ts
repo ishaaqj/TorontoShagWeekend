@@ -3,7 +3,7 @@
 // touching the components below — they only depend on these types.
 
 export type Workshop = {
-  id: string;
+  _id: string;
   title: string;
   instructors: string[];
   time: string;
@@ -14,7 +14,7 @@ export type Workshop = {
 };
 
 export type Teacher = {
-  id: string;
+  _id: string;
   name: string;
   bio: string;
   instagram?: string;
@@ -45,7 +45,7 @@ export const whatIsShag = {
 
 export const workshops: Workshop[] = [
   {
-    id: "workshop-1",
+    _id: "workshop-1",
     title: "Shag Foundations",
     instructors: ["Instructor Name"],
     time: "Sat, 1:00pm–2:30pm",
@@ -56,7 +56,7 @@ export const workshops: Workshop[] = [
       "Core rhythm, basic step, and the kick-ball-change that makes shag feel like shag. Start here if you're new.",
   },
   {
-    id: "workshop-2",
+    _id: "workshop-2",
     title: "Musicality & Variations",
     instructors: ["Instructor Name"],
     time: "Sat, 3:00pm–4:30pm",
@@ -70,13 +70,13 @@ export const workshops: Workshop[] = [
 
 export const teachers: Teacher[] = [
   {
-    id: "teacher-1",
+    _id: "teacher-1",
     name: "Teacher Name",
     bio: "A sentence or two on their background in shag and swing dance.",
     instagram: "https://instagram.com/",
   },
   {
-    id: "teacher-2",
+    _id: "teacher-2",
     name: "Teacher Name",
     bio: "A sentence or two on their background in shag and swing dance.",
     instagram: "https://instagram.com/",
